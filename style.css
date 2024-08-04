@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
-:root{
-    --bgOrange:#e84949;
+
+
+:root {
+    --bgOrange: #e84949;
+    --lm-bg: #F6F8FF;
+    --lm-bg-content: #FEFEFE;
+    --lm-text: #4B6A9B;
+    --lm-text-alt: #2B3442;
+    --lm-shadow-xl: rgba(70, 88, 109, 0.25);
+    --lm-icon-bg: brightness(100%);
+    --lm-desc-text:#0037ff;
+    --lm-heading:rgb(71, 70, 165);
 }
 
 *{
@@ -11,6 +21,7 @@
 }
 
 #wrapper{
+    background-color: var(--lm-bg);
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden ;
@@ -19,31 +30,36 @@
     margin: 0 auto;
     width: 1200px;
 }
-.logo-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: baseline;
-    align-items: center;
-}
-#logo{
-    width: 80px;
+
+#logoName{
+    font-size: 50px;
+    color: var(--lm-text-alt);
 }
 
-.logo-text{
-    margin-left:-1.2rem;
-    font-size: 28px;
-}
+
+.kalnia {
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
+    
 }
 .nav-items{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 0 4rem;
+    
 }
 
 .nav-items div{
@@ -52,7 +68,8 @@
     cursor: pointer;
 }
 .nav-items div a {
-    color: black;
+
+    color: var(--lm-text-alt);
 }
 .nav-items div:hover {
     transition:0.5s;
@@ -98,7 +115,7 @@ a{
 .hero-section-heading{
     font-size:35px;
     font-weight: 500;
-    color: rgb(71, 70, 165);
+    color: var(--lm-text-alt);
 }
 .role{
     color: #4e45d5;
@@ -107,11 +124,14 @@ a{
 .hero-section-sub-heading{
     font-size: 45px;
     line-height: 45px;
+    color: var(--lm-text-alt);
 }
 .hero-section-description{
     margin-top: 1rem;
     width: 70%;
     font-weight: 500;
+    font-size:large;
+    color: var(--lm-desc-text);
 }
 
 .btn-pink{
@@ -160,6 +180,7 @@ a{
 
 .user-image{
     padding: 2.5rem;
+    background-color: var(--lm-text-alt);
     filter: grayscale(1);
     transition: all 1s;
     animation:scaleImage 3s linear infinite ;
@@ -274,7 +295,7 @@ a{
 /* PROJECT SECTION */
 
 .project-section{
-    background-color:rgb(231, 231, 231);
+    background-color:var(--lm-bg-content);
     margin-top: 4rem;
 
 }
@@ -578,6 +599,7 @@ a{
 
 .skill-subHeading p {
     margin: 15px 0 ;
+    color: var(--lm-desc-text);
 }
 
 /* contact us section */
@@ -704,3 +726,29 @@ footer{
     display: flex;
     gap: 1rem;
 }
+
+
+
+/* dark and light mode  */
+
+.btnmode {
+    display: flex;
+    letter-spacing: 2.5px;
+    width: 70px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--lm-text-alt);
+    cursor: pointer;
+  }
+  
+  .btn p {
+    text-transform: uppercase;
+  }
+
+  #modeIcon{
+    color: black;
+    z-index: 10;
+    height: 25px;
+    width: 25px;
+  }

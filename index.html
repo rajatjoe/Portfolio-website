@@ -15,13 +15,16 @@
 
       <div class="navbar">
         <div class="logo-container">
-          <img id="logo" src="./userAsset/NavLogo.jpg" alt="logo">
-          <div class="logo-text">oe</div>
+          <p id="logoName" class="kalnia">RAJATJOE</p>
         </div>
         <div class="nav-items">
           <div><a href="#projects">Projects</a></div>
           <div><a href="#skills">Skills</a></div>
           <div><a href="#contactme">Contact Me</a></div>
+          <div class="btnmode" id="modeBtn">
+            <p id="modeText">DARK</p>
+            <img src="dark-mode.png" alt="" id="modeIcon">
+          </div>
         </div>
       </div>
       <hr>
@@ -329,40 +332,25 @@
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+  
+  
   <script>
     var typeData = new Typed(".role", {
-      strings: [
-        "Full Stack Developer",
-        "Web Developer",
-        "UI-UX Designer",
-        "Backend Developer",
-        "Coder",
-      ],
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 80,
-      backDelay: 1000,
-    });
+    strings: [
+      "Full Stack Developer",
+      "Web Developer",
+      "UI-UX Designer",
+      "Backend Developer",
+      "Coder",
+    ],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 80,
+    backDelay: 1000,
+  });
   </script>
+  <script src="script.js" ></script>
 
-
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent form from submitting the default way
-
-      // Get form values
-      var name = document.querySelector('input[name="name"]').value;
-      var email = document.querySelector('input[name="email"]').value;
-      var subject = document.querySelector('input[name="subject"]').value;
-      var message = document.querySelector('textarea[name="message"]').value;
-
-      // Create mailto link
-      var mailtoLink = `mailto:rajatgoswamix2003@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
-
-      // Open mailto link
-      window.location.href = mailtoLink;
-    });
-  </script>
 </body>
 
 </html>
