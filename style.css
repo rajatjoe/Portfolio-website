@@ -142,7 +142,8 @@ a{
     box-shadow: 5px 5px 8px 0 rgba(0,0,0);
     position: relative;
     z-index: 1;
-    width: 10vw;
+    width: 20vw;
+    
 }
 .btn-pink:hover{
     color: black;
@@ -752,3 +753,24 @@ footer{
     height: 25px;
     width: 25px;
   }
+
+  .btn-holder{
+    display: flex;
+    gap: 100px;
+  }
+
+  #get-btn{
+    border:none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    width:30% ;
+}
+#get-btn:hover{
+    color: black;
+    border: none;
+    scale: 0.9;
+}
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}

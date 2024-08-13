@@ -110,3 +110,9 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       alert('Failed to send message.');
     }
   });
+
+  document.getElementById('get-btn').addEventListener('click', async () => {
+    const response = await fetch('http://localhost:3000/formsget');
+    const forms = await response.json();
+    console.log(forms);
+  });

@@ -26,6 +26,12 @@ app.post('/forms', async (req, res) => {
   res.json(newForm);
 });
 
+
+app.get('/formsget', async (req, res) => {
+  const forms = await Form.find({});
+  res.json(forms);
+});
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
